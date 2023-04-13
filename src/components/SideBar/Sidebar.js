@@ -15,21 +15,21 @@ const SideBar = () => {
     { capacity: "8 or More", quantity: 10 },
   ];
   return (
-    <div class=" z-50 flex flex-col fixed top-0 left-0  w-56 h-full p-4 bg-white">
+    <div className=" z-50 flex flex-col fixed top-0 left-0  w-56 h-full p-4 bg-white">
       <span className="font-extralight ml-2 text-xs">TYPE</span>
       <div>
         {typeCheckBox.map((type) => (
-          <div className=" flex mt-3 ml-2">
-            <div class="flex items-center mb-4">
+          <div key={Math.random()} className=" flex mt-3 ml-2">
+            <div className="flex items-center mb-4">
               <input
                 id="default-checkbox"
                 type="checkbox"
                 value=""
-                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
               />
               <label
-                for="default-checkbox"
-                class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                htmlFor="default-checkbox"
+                className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
               >
                 {type.name}
               </label>
@@ -43,17 +43,17 @@ const SideBar = () => {
       <div className="mt-6">
         <span className="font-extralight ml-2 text-xs">CAPACITY</span>
         {capacityCheckBox.map((cap) => (
-          <div className=" flex mt-3 ml-2">
-            <div class="flex items-center mb-4">
+          <div key={Math.random()} className=" flex mt-3 ml-2">
+            <div className="flex items-center mb-4">
               <input
                 id="default-checkbox"
                 type="checkbox"
                 value=""
-                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
               />
               <label
-                for="default-checkbox"
-                class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                htmlFor="default-checkbox"
+                className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
               >
                 {cap.capacity}
               </label>

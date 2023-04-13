@@ -1,12 +1,38 @@
 import Card from "../Card/Card";
-const cars = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-const CarsRec = ({ isLiked, ClickHandler }) => {
+import { useEffect, useState } from "react";
+import axios from "axios";
+const CarsRec = () => {
+  const [cars, setCars] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get("http://localhost:3001/cardData")
+      .then((res) => setCars(res.data))
+      .catch((err) => err);
+  }, []);
+
+  const clickHandler = (e) => {
+    const id = e.target.id;
+    const allCars = [...cars];
+    const index = allCars.findIndex((car) => car.id == id);
+    const changedItem = allCars[index];
+    allCars[index].isLiked = !allCars[index].isLiked;
+    setCars(allCars);
+  };
+
   return (
     <div className="bg-gray-50">
       <h2 className="mx-14 text-gray-500">Popular Cars</h2>
       <div className="flex items-center justify-around p-5 w-auto flex-wrap">
         {cars.map((car) => (
-          <Card isLiked={isLiked} ClickHandler={ClickHandler} id={car.id} />
+          <Card
+            id={car.id}
+            title={car.title}
+            rent={car.rent}
+            isLiked={car.isLiked}
+            key={car.id}
+            ClickHandler={clickHandler}
+          />
         ))}
       </div>
       <div className="flex justify-center items-center">

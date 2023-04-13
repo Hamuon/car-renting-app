@@ -1,9 +1,6 @@
 import Arrow from "./../../../Assets/Icons/Arrow.png";
 const RentDetail = () => {
-  const options = [
-    1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21,
-    22, 23, 24, 25, 26, 27, 28, 29, 30, 31,
-  ];
+  const options = [...Array(32).keys()];
 
   var x = 5; //minutes interval
   var times = []; // time array
@@ -26,18 +23,18 @@ const RentDetail = () => {
   return (
     <div className="flex flex-wrap justify-center items-center">
       <div className="flex-col p-3 rounded-xl bg-white lg:w-4/12 md:w-6/12 sm:w-96 xsm:w-96 m-5">
-        <div class="flex items-center p-2 px-6">
+        <div className="flex items-center p-2 px-6">
           <input
             checked
             id="default-radio-2"
             type="radio"
             value=""
             name="default-radio"
-            class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+            className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
           />
           <label
-            for="default-radio-2"
-            class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+            htmlFor="default-radio-2"
+            className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
           >
             Pick Up
           </label>
@@ -47,7 +44,7 @@ const RentDetail = () => {
             <div>Location</div>
             <div>
               <select className=" text-gray-500 font-extralight">
-                <option>tabriz</option>
+                <option defaultChecked>tabriz</option>
                 <option>tabriz</option>
                 <option>tabriz</option>
               </select>
@@ -58,7 +55,7 @@ const RentDetail = () => {
             <div>
               <select className=" text-gray-500 font-extralight">
                 {options.map((option) => (
-                  <option>{option}</option>
+                  <option key={Math.random()}>{option}</option>
                 ))}
               </select>
             </div>
@@ -68,7 +65,7 @@ const RentDetail = () => {
             <div>
               <select className=" text-gray-500 font-extralight">
                 {times.map((t) => (
-                  <option>{t}</option>
+                  <option key={Math.random()}>{t}</option>
                 ))}
               </select>
             </div>
@@ -83,18 +80,18 @@ const RentDetail = () => {
         />
       </div>
       <div className="flex-col p-3 rounded-xl bg-white  lg:w-4/12 md:w-6/12 sm:w-96 xsm:w-96 m-5">
-        <div class="flex items-center p-2 px-6">
+        <div className="flex items-center p-2 px-6">
           <input
             checked
             id="default-radio-2"
             type="radio"
             value=""
             name="default-radio"
-            class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+            className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
           />
           <label
-            for="default-radio-2"
-            class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+            htmlFor="default-radio-2"
+            className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
           >
             Drop Off
           </label>
@@ -104,7 +101,7 @@ const RentDetail = () => {
             <div>Location</div>
             <div>
               <select className=" text-gray-500 font-extralight">
-                <option>tabriz</option>
+                <option defaultChecked>tabriz</option>
                 <option>tabriz</option>
                 <option>tabriz</option>
               </select>
@@ -115,7 +112,7 @@ const RentDetail = () => {
             <div>
               <select className=" text-gray-500 font-extralight">
                 {options.map((option) => (
-                  <option>{option}</option>
+                  <option key={Math.random()}>{option}</option>
                 ))}
               </select>
             </div>
@@ -125,7 +122,7 @@ const RentDetail = () => {
             <div>
               <select className=" text-gray-500 font-extralight">
                 {times.map((t) => (
-                  <option>{t}</option>
+                  <option key={Math.random()}>{t}</option>
                 ))}
               </select>
             </div>
