@@ -1,8 +1,29 @@
 import Logo from "./../../Assets/Icons/Logo.png";
 import Profile from "./../../Assets/Icons/Head.png";
-const Navbar = ({ open, setOpen }) => {
+import SideBar from "../SideBar/Sidebar";
+import { useState, useRef, useEffect } from "react";
+const Navbar = () => {
+  const [open, setOpen] = useState(false);
+
+  let sideRef = useRef();
+
+  useEffect(() => {
+    let handler = (e) => {
+      if (!sideRef.current.contains(e.target)) {
+        setOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handler);
+    return () => {
+      document.addEventListener("mousedown", handler);
+    };
+  });
+
   return (
     <>
+      <div className={open ? "" : "hidden"} ref={sideRef}>
+        {<SideBar />}
+      </div>
       <nav className="bg-white border-gray-200 px-2 sm:px-4 py-5 rounded dark:bg-gray-900 shadow-[0_0px_200px_0px_rgba(0,0,0,0.3)]">
         <div className="container flex flex-wrap items-center justify-between mx-auto">
           <div className="flex justify-start items-center">

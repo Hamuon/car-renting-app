@@ -1,78 +1,102 @@
 {
   "cardData": [
     {
-      "title":"Koenigsegg",
-      "rent":"99.00",
-      "id":"1",
-      "isLiked": false
+      "title": "Nissan GT - R",
+      "rent": "80.00",
+      "id": "1",
+      "isLiked": true,
+      "rate": 0
     },
     {
-      "title":"Nissan GT - R",
-      "rent":"80.00",
-      "id":"2",
-      "isLiked": false
+      "title": "Nissan GT - R",
+      "rent": "80.00",
+      "id": "2",
+      "isLiked": false,
+      "rate": 0
     },
     {
-      "title":"Rolls - Royce",
-      "rent":"74.00",
-      "id":"3",
-      "isLiked": false
+      "title": "Rolls - Royce",
+      "rent": "74.00",
+      "id": "3",
+      "isLiked": true,
+      "rate": 2
     },
     {
-      "title":"CR  - V",
-      "rent":"90.00",
-      "id":"4",
-      "isLiked": false
+      "title": "CR  - V",
+      "rent": "90.00",
+      "id": "4",
+      "isLiked": false,
+      "rate": 0
     },
     {
-      "title":"CR  - V",
-      "rent":"90.00",
-      "id":"5",
-      "isLiked": false
+      "title": "CR  - V",
+      "rent": "90.00",
+      "id": "5",
+      "isLiked": false,
+      "rate": 0
     },
     {
-      "title":"CR  - V",
-      "rent":"90.00",
-      "id":"6",
-      "isLiked": false
+      "title": "CR  - V",
+      "rent": "90.00",
+      "id": "6",
+      "isLiked": false,
+      "rate": 0
     },
     {
-      "title":"CR  - V",
-      "rent":"90.00",
-      "id":"7",
-      "isLiked": false
+      "title": "CR  - V",
+      "rent": "90.00",
+      "id": "7",
+      "isLiked": false,
+      "rate": 0
     },
     {
-      "title":"CR  - V",
-      "rent":"90.00",
-      "id":"8",
-      "isLiked": false
+      "title": "CR  - V",
+      "rent": "90.00",
+      "id": "8",
+      "isLiked": false,
+      "rate": 0
     },
     {
-      "title":"CR  - V",
-      "rent":"90.00",
-      "id":"9",
-      "isLiked": false
+      "title": "CR  - V",
+      "rent": "90.00",
+      "id": "9",
+      "isLiked": false,
+      "rate": 0
     },
     {
-      "title":"CR  - V",
-      "rent":"90.00",
-      "id":"10",
-      "isLiked": false
+      "title": "CR  - V",
+      "rent": "90.00",
+      "id": "10",
+      "isLiked": false,
+      "rate": 0
     },
     {
-      "title":"CR  - V",
-      "rent":"90.00",
-      "id":"11",
-      "isLiked": false
+      "title": "CR  - V",
+      "rent": "90.00",
+      "id": "11",
+      "isLiked": false,
+      "rate": 0
     },
     {
-      "title":"CR  - V",
-      "rent":"90.00",
-      "id":"12",
-      "isLiked": false
+      "title": "CR  - V",
+      "rent": "90.00",
+      "id": "12",
+      "isLiked": false,
+      "rate": 0
+    },
+    {
+      "title": "CR  - V",
+      "rent": "90.00",
+      "id": "13",
+      "isLiked": false,
+      "rate": 0
+    },
+    {
+      "title": "CR  - V",
+      "rent": "90.00",
+      "id": "14",
+      "isLiked": false,
+      "rate": 0
     }
   ]
-  
-  
 }

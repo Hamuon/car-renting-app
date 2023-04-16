@@ -1,38 +1,16 @@
-import { useRef, useState, useEffect } from "react";
-import CarsRec from "./components/CarsRec/CarsRec";
-import Footer from "./components/Footer/Footer";
-import HeroCard from "./components/Hero/HeroCard/HeroCard";
-import Navbar from "./components/Navbar/Navbar";
-import SideBar from "./components/SideBar/Sidebar";
-import Slider from "./components/Slider/Slider";
+import { Route, Routes } from "react-router-dom";
+import CarDetail from "./components/CarDetail/CarDetail";
+import Layout from "./components/Layout/Layout";
+import HomePage from "./Pages/HomePage";
+
 const App = () => {
-  const [open, setOpen] = useState(false);
-
-  let sideRef = useRef();
-
-  useEffect(() => {
-    let handler = (e) => {
-      if (!sideRef.current.contains(e.target)) {
-        setOpen(false);
-      }
-    };
-    document.addEventListener("mousedown", handler);
-    return () => {
-      document.addEventListener("mousedown", handler);
-    };
-  });
-
   return (
-    <>
-      <div className={open ? "" : "hidden"} ref={sideRef}>
-        {<SideBar />}
-      </div>
-      <Navbar open={open} setOpen={setOpen} />
-      <HeroCard />
-      <Slider />
-      <CarsRec />
-      <Footer />
-    </>
+    <Layout>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/car/:id" element={<CarDetail />} />
+      </Routes>
+    </Layout>
   );
 };
 
